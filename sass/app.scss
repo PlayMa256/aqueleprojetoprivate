@@ -1,0 +1,49 @@
+// configurações gerais
+ @import "normalize";
+ @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+.clearfix:after, .clearfix:before {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; 
+}
+.painel, html, body{
+	height:100%;
+	width:100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+$topColor: #ffc55c;
+$menuFont: #e95d35;
+//top
+.top{
+	background: $topColor;
+
+	.top-content{
+		padding-top: 10px;
+		padding-right:10px;
+		padding-left:10px;
+		a{
+			color:$menuFont;
+			text-decoration: none;
+		}
+		.logo{
+			float:left;
+		}
+		.menu{
+			float:right;
+		}
+	}
+
+
+	.top-slogan{
+		img{
+			float:left;
+		}
+		.slogan{
+			float:left;
+
+		}
+	}
+}
