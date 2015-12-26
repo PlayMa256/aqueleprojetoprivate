@@ -367,7 +367,8 @@ th {
   font-family: 'Montserrat', sans-serif; }
 
 .top {
-  background: #ffc55c; }
+  background: #ffc55c;
+  position: relative; }
   .top .top-content {
     padding-top: 10px;
     padding-right: 10px;
@@ -379,7 +380,14 @@ th {
       float: left; }
     .top .top-content .menu {
       float: right; }
-  .top .top-slogan img {
-    float: left; }
-  .top .top-slogan .slogan {
-    float: left; }
+  .top .top-slogan {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center; }
+    .top .top-slogan img {
+      float: left; }
+    .top .top-slogan .slogan {
+      float: left;
+      font-size: 1em; }

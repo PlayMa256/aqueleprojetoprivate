@@ -19,7 +19,7 @@ $menuFont: #e95d35;
 //top
 .top{
 	background: $topColor;
-
+position: relative;
 	.top-content{
 		padding-top: 10px;
 		padding-right:10px;
@@ -38,11 +38,19 @@ $menuFont: #e95d35;
 
 
 	.top-slogan{
+		position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+			display:flex;
+	align-items: center;
 		img{
 			float:left;
 		}
 		.slogan{
+			
 			float:left;
+			font-size:1em;
+
 
 		}
 	}
