@@ -13,14 +13,19 @@
 	width:100%;
 	font-family: 'Montserrat', sans-serif;
 }
+h1,h2,h3,h4,h5,h6,p,span,a{
+	font-family: 'Montserrat', sans-serif;
+}
 
 $topColor: #ffc55c;
 $menuFont: #e95d35;
 //top
-.top{
-	background: $topColor;
-position: relative;
-	.top-content{
+
+.home-content{
+	height:100%;
+	width:100%;
+	background-color:$topColor;	
+	.top-menu{
 		padding-top: 10px;
 		padding-right:10px;
 		padding-left:10px;
@@ -35,23 +40,36 @@ position: relative;
 			float:right;
 		}
 	}
+	.top{
+		background: $topColor;
+		display:flex;
+		height:900px;
+		flex-direction:column;
+		align-items:center;
 
-
-	.top-slogan{
-		position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+	
+		.top-slogan{
 			display:flex;
-	align-items: center;
-		img{
-			float:left;
-		}
-		.slogan{
+			align-items:center;
+			flex:0.8;
 			
-			float:left;
-			font-size:1em;
-
-
+			img{
+				float:left;
+				margin-right:100px;
+			}
+			.slogan{
+				margin-left:20px;
+				float:left;
+				font-size:2.5em;
+	
+			}
 		}
-	}
+		.top-bottom{
+			font-size:2em;
+			width:500px;
+			text-align:center;
+		}
+	}	
+	
 }
+

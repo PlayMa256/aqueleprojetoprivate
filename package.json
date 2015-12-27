@@ -1,0 +1,24 @@
+{
+  "name": "aqueleprojetoprivate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlayMa256/aqueleprojetoprivate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PlayMa256/aqueleprojetoprivate/issues"
+  },
+  "homepage": "https://github.com/PlayMa256/aqueleprojetoprivate#readme"
+}

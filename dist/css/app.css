@@ -366,28 +366,42 @@ th {
   width: 100%;
   font-family: 'Montserrat', sans-serif; }
 
-.top {
-  background: #ffc55c;
-  position: relative; }
-  .top .top-content {
+h1, h2, h3, h4, h5, h6, p, span, a {
+  font-family: 'Montserrat', sans-serif; }
+
+.home-content {
+  height: 100%;
+  width: 100%;
+  background-color: #ffc55c; }
+  .home-content .top-menu {
     padding-top: 10px;
     padding-right: 10px;
     padding-left: 10px; }
-    .top .top-content a {
+    .home-content .top-menu a {
       color: #e95d35;
       text-decoration: none; }
-    .top .top-content .logo {
+    .home-content .top-menu .logo {
       float: left; }
-    .top .top-content .menu {
+    .home-content .top-menu .menu {
       float: right; }
-  .top .top-slogan {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  .home-content .top {
+    background: #ffc55c;
     display: flex;
+    height: 900px;
+    flex-direction: column;
     align-items: center; }
-    .top .top-slogan img {
-      float: left; }
-    .top .top-slogan .slogan {
-      float: left;
-      font-size: 1em; }
+    .home-content .top .top-slogan {
+      display: flex;
+      align-items: center;
+      flex: 0.8; }
+      .home-content .top .top-slogan img {
+        float: left;
+        margin-right: 100px; }
+      .home-content .top .top-slogan .slogan {
+        margin-left: 20px;
+        float: left;
+        font-size: 2.5em; }
+    .home-content .top .top-bottom {
+      font-size: 2em;
+      width: 500px;
+      text-align: center; }
