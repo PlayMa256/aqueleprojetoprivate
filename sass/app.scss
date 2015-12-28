@@ -1,75 +1,83 @@
 // configurações gerais
- @import "normalize";
- @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-.clearfix:after, .clearfix:before {
-  content: " ";
-  display: table; }
+// @import "normalize";
+@import "html5reset-1.6.1";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+.clearfix:after,
+.clearfix:before {
+ content: " ";
+ display: table;
+}
 
 .clearfix:after {
-  clear: both; 
+ clear: both;
 }
-.painel, html, body{
-	height:100%;
-	width:100%;
-	font-family: 'Montserrat', sans-serif;
+
+body,
+html,
+.painel {
+ overflow: hidden;
 }
-h1,h2,h3,h4,h5,h6,p,span,a{
-	font-family: 'Montserrat', sans-serif;
+
+.painel {
+ height: 100vh;
+ width: 100vw;
+ font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+ font-family: 'Montserrat', sans-serif;
+ color: #333333;
+ font-weight: normal;
 }
 
 $topColor: #ffc55c;
 $menuFont: #e95d35;
 //top
-
-.home-content{
-	height:100%;
-	width:100%;
-	background-color:$topColor;	
-	.top-menu{
-		padding-top: 10px;
-		padding-right:10px;
-		padding-left:10px;
-		a{
-			color:$menuFont;
-			text-decoration: none;
-		}
-		.logo{
-			float:left;
-		}
-		.menu{
-			float:right;
-		}
-	}
-	.top{
-		background: $topColor;
-		display:flex;
-		height:900px;
-		flex-direction:column;
-		align-items:center;
-
-	
-		.top-slogan{
-			display:flex;
-			align-items:center;
-			flex:0.8;
-			
-			img{
-				float:left;
-				margin-right:100px;
-			}
-			.slogan{
-				margin-left:20px;
-				float:left;
-				font-size:2.5em;
-	
-			}
-		}
-		.top-bottom{
-			font-size:2em;
-			width:500px;
-			text-align:center;
-		}
-	}	
-	
+.top-wrapper {
+ background-color: $topColor;
+ .menu-logo  {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  a {
+   color: $menuFont;
+   text-decoration: none;
+  }
+  .logo {
+   float: left;
+  }
+  .menu {
+   float: right;
+  }
+ }
+ .top-slogan-parent{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-direction:column;
+  
+  	img {
+ 				max-width: 100%;
+ 				float: left;
+ 				margin-right: 100px;
+ 			}
+ 			.slogan {
+ 				margin-left: 20px;
+ 				float: left;
+ 				font-size: 2.5em;
+ 			}
+ }
 }
 
+.register {
+ background-color: #FFFFFF;
+}
