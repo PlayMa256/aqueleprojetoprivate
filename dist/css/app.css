@@ -5,6 +5,7 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
+@import url(font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -87,6 +88,10 @@ hr {
 input, select {
   vertical-align: middle; }
 
+@font-face {
+  font-family: "Montserrat-light";
+  src: url("../fonts/Montserrat-Light.otf") format("opentype"); }
+
 .clearfix:after,
 .clearfix:before {
   content: " ";
@@ -99,8 +104,7 @@ input, select {
   max-width: 100%;
   /* added */
   height: 100vh;
-  width: 100vw;
-  font-family: 'Montserrat', sans-serif; }
+  width: 100vw; }
 
 h1,
 h2,
@@ -110,10 +114,13 @@ h5,
 h6,
 p,
 span,
-a {
+a, body, html, .painel {
   font-family: 'Montserrat', sans-serif;
   color: #333333;
   font-weight: normal; }
+
+h2.title {
+  font-size: 3em; }
 
 .top-wrapper {
   background-color: #ffc55c;
@@ -135,15 +142,19 @@ a {
       -ms-flex-direction: column;
           flex-direction: column; }
   .top-wrapper .menu-logo {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px; }
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    width: 100vw;
+    max-width: 100%; }
     .top-wrapper .menu-logo a {
       color: #e95d35;
       text-decoration: none; }
     .top-wrapper .menu-logo .logo {
+      margin-left: 20px;
       float: left; }
     .top-wrapper .menu-logo .menu {
+      margin-right: 20px;
       float: right; }
   .top-wrapper .slogan-content img {
     max-width: 100%;
@@ -156,7 +167,60 @@ a {
   .top-wrapper .top-bottom {
     font-size: 2em;
     width: 500px;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 20px; }
 
 .register {
-  background-color: #FFFFFF; }
+  text-align: center; }
+  .register h2.title {
+    margin-top: 10px;
+    margin-bottom: 20px; }
+  .register .register-btn,
+  .register .login-btn {
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 0;
+    width: 200px;
+    font-size: 1em;
+    cursor: pointer; }
+  .register .register-btn {
+    background-color: #e95d35;
+    color: #FFFFFF;
+    margin-right: 70px; }
+    .register .register-btn:hover {
+      background-color: #ce5330; }
+  .register .login-btn {
+    background: #ffffa2;
+    color: #000000; }
+    .register .login-btn:hover {
+      background-color: #dddd8e; }
+
+.avaliacoes {
+  text-align: center; }
+  .avaliacoes .opinioes {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: rows;
+        -ms-flex-direction: rows;
+            flex-direction: rows;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    margin-top: 20px; }
+    .avaliacoes .opinioes .opiniao {
+      width: 400px;
+      margin-top: 20px; }
+      .avaliacoes .opinioes .opiniao h3 {
+        text-align: left; }
+      .avaliacoes .opinioes .opiniao p {
+        text-align: justify;
+        font-family: Montserrat-light; }
+      .avaliacoes .opinioes .opiniao .rating {
+        float: left;
+        color: #daa520; }
+      .avaliacoes .opinioes .opiniao .autor {
+        float: right; }

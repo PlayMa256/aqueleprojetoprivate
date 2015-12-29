@@ -1,23 +1,28 @@
 // configurações gerais
-// @import "normalize";
 @import "html5reset-1.6.1";
+@import "font-awesome.css";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@font-face {
+    font-family: "Montserrat-light";
+    src: url("../fonts/Montserrat-Light.otf") format("opentype");
+}
+
 .clearfix:after,
 .clearfix:before {
- content: " ";
- display: table;
+    content: " ";
+    display: table;
 }
 
 .clearfix:after {
- clear: both;
+    clear: both;
 }
 
-
 .painel {
- max-width:100%;  /* added */
- height: 100vh;
- width: 100vw;
- font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+    /* added */
+    height: 100vh;
+    width: 100vw;
 }
 
 h1,
@@ -28,55 +33,122 @@ h5,
 h6,
 p,
 span,
-a {
- font-family: 'Montserrat', sans-serif;
- color: #333333;
- font-weight: normal;
+a, body, html, .painel {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-weight: normal;
+}
+
+h2.title {
+    font-size: 3em;
 }
 
 $topColor: #ffc55c;
 $menuFont: #e95d35;
+$goldColor: #daa520;
 //top
 .top-wrapper {
- background-color: $topColor;
- display: flex;
- align-items: center;
- justify-content: space-between;
- flex-direction: column;
- .menu-logo {
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  a {
-   color: $menuFont;
-   text-decoration: none;
-  }
-  .logo {
-   float: left;
-  }
-  .menu {
-   float: right;
-  }
- }
- .slogan-content {
-  img {
-   max-width: 100%;
-   float: left;
-   margin-right: 100px;
-  }
-  .slogan {
-   margin-left: 20px;
-   float: left;
-   font-size: 2.5em;
-  }
- }
- .top-bottom {
-  font-size: 2em;
-  width: 500px;
-  text-align: center;
- }
+    background-color: $topColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    .menu-logo {
+        justify-content: space-around;
+        width: 100vw;
+        max-width: 100%;
+        a {
+            color: $menuFont;
+            text-decoration: none;
+        }
+        .logo {
+            margin-left: 20px;
+            float: left;
+        }
+        .menu {
+            margin-right: 20px;
+            float: right;
+        }
+    }
+    .slogan-content {
+        img {
+            max-width: 100%;
+            float: left;
+            margin-right: 100px;
+        }
+        .slogan {
+            margin-left: 20px;
+            float: left;
+            font-size: 2.5em;
+        }
+    }
+    .top-bottom {
+        font-size: 2em;
+        width: 500px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 
 .register {
- background-color: #FFFFFF;
+    text-align: center;
+    h2.title {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .register-btn,
+    .login-btn {
+        border-radius: 20px;
+        border: 0;
+        padding: 10px 0;
+        width: 200px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    .register-btn {
+        background-color: $menuFont;
+        color: #FFFFFF;
+        margin-right: 70px;
+        &:hover {
+            background-color: #ce5330;
+        }
+    }
+    .login-btn {
+        background: #ffffa2;
+        color: #000000;
+        &:hover {
+            background-color: #dddd8e;
+        }
+    }
+}
+
+.avaliacoes {
+    text-align: center;
+    .opinioes{
+        display:flex;
+        flex-direction:rows;
+        justify-content:space-around;
+        margin-top:20px;
+        .opiniao {
+            width: 400px;
+            margin-top:20px;
+          
+            h3{
+                text-align:left;
+            }
+            p{
+                text-align:justify;
+                font-family:Montserrat-light;
+            }
+            .rating{
+                float:left;
+                color:$goldColor;
+                
+            }
+            .autor{
+                float:right;
+            }
+        }
+    }
+    
 }
