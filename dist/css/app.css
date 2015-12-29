@@ -95,12 +95,9 @@ input, select {
 .clearfix:after {
   clear: both; }
 
-body,
-html,
 .painel {
-  overflow: hidden; }
-
-.painel {
+  max-width: 100%;
+  /* added */
   height: 100vh;
   width: 100vw;
   font-family: 'Montserrat', sans-serif; }
@@ -119,7 +116,24 @@ a {
   font-weight: normal; }
 
 .top-wrapper {
-  background-color: #ffc55c; }
+  background-color: #ffc55c;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .top-wrapper .menu-logo {
     padding-top: 10px;
     padding-right: 10px;
@@ -131,33 +145,18 @@ a {
       float: left; }
     .top-wrapper .menu-logo .menu {
       float: right; }
-  .top-wrapper .top-slogan-parent {
-    height: 100vh;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .top-wrapper .top-slogan-parent img {
-      max-width: 100%;
-      float: left;
-      margin-right: 100px; }
-    .top-wrapper .top-slogan-parent .slogan {
-      margin-left: 20px;
-      float: left;
-      font-size: 2.5em; }
+  .top-wrapper .slogan-content img {
+    max-width: 100%;
+    float: left;
+    margin-right: 100px; }
+  .top-wrapper .slogan-content .slogan {
+    margin-left: 20px;
+    float: left;
+    font-size: 2.5em; }
+  .top-wrapper .top-bottom {
+    font-size: 2em;
+    width: 500px;
+    text-align: center; }
 
 .register {
   background-color: #FFFFFF; }

@@ -12,13 +12,9 @@
  clear: both;
 }
 
-body,
-html,
-.painel {
- overflow: hidden;
-}
 
 .painel {
+ max-width:100%;  /* added */
  height: 100vh;
  width: 100vw;
  font-family: 'Montserrat', sans-serif;
@@ -43,7 +39,11 @@ $menuFont: #e95d35;
 //top
 .top-wrapper {
  background-color: $topColor;
- .menu-logo  {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: column;
+ .menu-logo {
   padding-top: 10px;
   padding-right: 10px;
   padding-left: 10px;
@@ -58,23 +58,22 @@ $menuFont: #e95d35;
    float: right;
   }
  }
- .top-slogan-parent{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  flex-direction:column;
-  
-  	img {
- 				max-width: 100%;
- 				float: left;
- 				margin-right: 100px;
- 			}
- 			.slogan {
- 				margin-left: 20px;
- 				float: left;
- 				font-size: 2.5em;
- 			}
+ .slogan-content {
+  img {
+   max-width: 100%;
+   float: left;
+   margin-right: 100px;
+  }
+  .slogan {
+   margin-left: 20px;
+   float: left;
+   font-size: 2.5em;
+  }
+ }
+ .top-bottom {
+  font-size: 2em;
+  width: 500px;
+  text-align: center;
  }
 }
 
