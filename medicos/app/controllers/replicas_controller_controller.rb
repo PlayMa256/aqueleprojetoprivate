@@ -1,0 +1,2 @@
+class ReplicasControllerController < ApplicationController
+end
