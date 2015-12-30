@@ -114,13 +114,21 @@ h5,
 h6,
 p,
 span,
-a, body, html, .painel {
+a,
+body,
+html,
+.painel,
+td,
+th {
   font-family: 'Montserrat', sans-serif;
   color: #333333;
   font-weight: normal; }
 
 h2.title {
-  font-size: 3em; }
+  font-size: 3rem; }
+  @media (max-width: 510px) {
+    h2.title {
+      font-size: 2rem; } }
 
 .top-wrapper {
   background-color: #ffc55c;
@@ -156,21 +164,37 @@ h2.title {
     .top-wrapper .menu-logo .menu {
       margin-right: 20px;
       float: right; }
-  .top-wrapper .slogan-content img {
-    max-width: 100%;
-    float: left;
-    margin-right: 100px; }
-  .top-wrapper .slogan-content .slogan {
-    margin-left: 20px;
-    float: left;
-    font-size: 2.5em; }
+  .top-wrapper .slogan-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .top-wrapper .slogan-content .doubt-face {
+      max-height: 100%;
+      max-width: 100%;
+      min-width: 0; }
+    .top-wrapper .slogan-content .slogan {
+      margin-left: 20px;
+      font-size: 2.5rem; }
+      @media (max-width: 510px) {
+        .top-wrapper .slogan-content .slogan {
+          font-size: 2rem;
+          margin-left: 0; } }
   .top-wrapper .top-bottom {
-    font-size: 2em;
-    width: 500px;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 20px; }
+    @media (max-width: 510px) {
+      .top-wrapper .top-bottom {
+        font-size: 1.5rem;
+        margin-top: 0; } }
 
 .register {
+  height: 300px;
   text-align: center; }
   .register h2.title {
     margin-top: 10px;
@@ -181,7 +205,7 @@ h2.title {
     border: 0;
     padding: 10px 0;
     width: 200px;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer; }
   .register .register-btn {
     background-color: #e95d35;
@@ -196,7 +220,9 @@ h2.title {
       background-color: #dddd8e; }
 
 .avaliacoes {
-  text-align: center; }
+  height: auto;
+  text-align: center;
+  margin-bottom: 50px; }
   .avaliacoes .opinioes {
     display: -webkit-box;
     display: -webkit-flex;
@@ -215,8 +241,13 @@ h2.title {
       width: 400px;
       margin-top: 20px; }
       .avaliacoes .opinioes .opiniao h3 {
-        text-align: left; }
+        text-align: left;
+        font-size: 1.4rem; }
+        @media (max-width: 500px) {
+          .avaliacoes .opinioes .opiniao h3 {
+            font-size: 1rem; } }
       .avaliacoes .opinioes .opiniao p {
+        margin: 5px 0;
         text-align: justify;
         font-family: Montserrat-light; }
       .avaliacoes .opinioes .opiniao .rating {
@@ -224,3 +255,106 @@ h2.title {
         color: #daa520; }
       .avaliacoes .opinioes .opiniao .autor {
         float: right; }
+    @media (max-width: 870px) {
+      .avaliacoes .opinioes {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    @media (max-width: 700px) {
+      .avaliacoes .opinioes {
+        margin-bottom: 20px; }
+        .avaliacoes .opinioes p {
+          font-size: 0.8rem;
+          line-height: 20px; } }
+
+.ranking {
+  height: 500px;
+  text-align: center; }
+  .ranking table {
+    margin-top: 40px; }
+    .ranking table thead {
+      background-color: #ffd78f; }
+      .ranking table thead th {
+        font-size: 1.18rem;
+        font-weight: normal;
+        margin-bottom: 5px; }
+    .ranking table tbody:before {
+      content: "-";
+      display: block;
+      line-height: 5px;
+      color: transparent; }
+    .ranking table td {
+      font-family: Montserrat-light; }
+    @media (max-width: 767px) {
+      .ranking table {
+        /* Hide table headers (but not display: none;, for accessibility) */ }
+        .ranking table table, .ranking table thead, .ranking table tbody, .ranking table th, .ranking table td, .ranking table tr {
+          display: block; }
+        .ranking table thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px; }
+        .ranking table tr {
+          border: 1px solid #ccc; }
+        .ranking table td {
+          /* Behave  like a "row" */
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%; }
+        .ranking table td:before {
+          /* Now like a table header */
+          position: absolute;
+          /* Top/left values mimic padding */
+          top: 6px;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap; }
+        .ranking table td:nth-of-type(1):before {
+          content: "First Name"; }
+        .ranking table td:nth-of-type(2):before {
+          content: "Last Name"; }
+        .ranking table td:nth-of-type(3):before {
+          content: "Job Title"; }
+        .ranking table td:nth-of-type(4):before {
+          content: "Favorite Color"; }
+        .ranking table td:nth-of-type(5):before {
+          content: "Wars of Trek?"; }
+        .ranking table td:nth-of-type(6):before {
+          content: "Porn Name"; }
+        .ranking table td:nth-of-type(7):before {
+          content: "Date of Birth"; }
+        .ranking table td:nth-of-type(8):before {
+          content: "Dream Vacation City"; }
+        .ranking table td:nth-of-type(9):before {
+          content: "GPA"; }
+        .ranking table td:nth-of-type(10):before {
+          content: "Arbitrary Data"; } }
+
+@media (max-width: 1148px) {
+  .slogan-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center; }
+    .slogan-content .doubt-face {
+      margin-bottom: 20px; }
+    .slogan-content .slogan {
+      display: block; } }
