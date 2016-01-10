@@ -1,4 +1,4 @@
 class Reclamacao < ActiveRecord::Base
-    has_many :usuario, :foreign_key => :usuario_reclamante_id
-    has_many :usuario, :foreign_key => :usuario_critiado_id
+    belongs_to :usuario_reclamante, class_name: "User"
+    belongs_to :usuario_reclamado, class_name: "User"
 end

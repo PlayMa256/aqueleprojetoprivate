@@ -1,0 +1,17 @@
+<table border="1px" style="boder:1px solid red" cellspacing>
+    <thead>
+        <tr>Titulo</tr>
+        <tr>Comentario</tr>
+        <tr>Usuario id reclamante</tr>
+        <tr>usuario id reclamado</tr>
+    </thead>
+    <tbody>
+        <% @todasReclamacoes.each do |reclamacao| %>
+            <tr>
+                <td><%= link_to reclamacao.titulo, reclamacao %></td>
+                <td><%= reclamacao.conteudo %></td>
+                <td><%= reclamacao.usuario_reclamante.nome %></td>
+            </tr>        
+        <% end %>
+    </tbody>
+</table>

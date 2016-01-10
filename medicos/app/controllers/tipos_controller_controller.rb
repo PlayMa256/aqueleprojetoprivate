@@ -1,2 +1,0 @@
-class TiposControllerController < ApplicationController
-end

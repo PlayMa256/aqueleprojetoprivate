@@ -1,2 +1,0 @@
-class ReclamacoesControllerController < ApplicationController
-end

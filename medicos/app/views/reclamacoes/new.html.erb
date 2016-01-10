@@ -1,0 +1,10 @@
+<%= form_for @reclamacao do |f| %>
+    <%= f.label :titulo %>
+    <%= f.text_field  :titulo %>
+    
+    <%= f.label :conteudo %>
+    <%= f.text_area  :conteudo %>
+    <%= f.submit "Cadastrar" %>
+<% end %>
+
+Esse é o current user: <%= @currentuser %>
