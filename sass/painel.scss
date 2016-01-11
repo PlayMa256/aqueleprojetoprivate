@@ -1,0 +1,63 @@
+@import "html5reset-1.6.1";
+$backgroundColorHeader: #393939;
+$backgroundColorMenUIcons: #cd8400;
+$backgroundReclameButton: #e63300;
+header{
+    background-color:$backgroundColorHeader;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    
+    button.reclame{
+        padding-left:10px;
+        background:$backgroundReclameButton;
+        border:0;
+        color:#FFFFFF;
+        font-size:1.3rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        &:hover{
+            cursor:pointer;
+            background-color:#c52c00;
+        }
+        img{
+            margin-left:10px;
+            margin-right:5px;
+            height:17px;
+        }
+    }
+    .profile-related{
+        display:flex;
+        align-items:center;
+        margin-right:20px;
+        .profile{
+            display:flex;
+            align-items:center;
+            color:#FFF;
+            .profile_pic{
+                height:45px;
+
+            }
+            span{
+                margin-left:10px;
+                margin-right: 10px;    
+            }
+            
+        }
+        .notificacoes{
+            a {
+                img{
+                    height:20px;
+                }
+            }
+            .history{
+                img{
+                    height:16px;
+                    
+                }
+                margin-right:5px;    
+            }
+            margin-right:10px;
+        }
+    }
+}
