@@ -1,5 +1,5 @@
 class ReclamacoesController < ApplicationController
-
+    layout 'painel'
     def new
        @reclamacao = Reclamacao.new
        @currentuser = current_user.id

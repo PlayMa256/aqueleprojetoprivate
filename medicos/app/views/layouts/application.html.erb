@@ -2,15 +2,29 @@
 <html>
 <head>
   <title>Medicos</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'sign_up', media: 'all', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <%= javascript_include_tag 'logins', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-   <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
 </head>
 <body>
+    <% if flash[:alert] %>
+        <div class="alerta alert">
+            <a href="#" class="fechar">X</a>
+            <p><%= alert %></p>
+        </div>
+    <% end %>
+    <% if flash[:notice] %>
+        <div class="alerta notice">
+            <a href="#" class="fechar">X</a>
+            <p><%= notice %></p>
+        </div>
+    <% end %>
+<div class="sign-up-wrapper">
 
-<%= yield %>
-
+        
+        <%= yield %>
+    </div>
 </body>
 </html>

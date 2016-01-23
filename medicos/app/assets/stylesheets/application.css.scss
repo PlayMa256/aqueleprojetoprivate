@@ -1,0 +1,108 @@
+@import "html5reset-1.6.1";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@font-face {
+    font-family: "Montserrat-light";
+    src: url("../fonts/Montserrat-Light.otf") format("opentype");
+}
+$backgroundColorHeader: #393939;
+$backgroundColorMenUIcons: #cd8400;
+$backgroundReclameButton: #e63300;
+header{
+    background-color:$backgroundColorHeader;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    
+    button.reclame{
+        padding-left:10px;
+        background:$backgroundReclameButton;
+        border:0;
+        color:#FFFFFF;
+        font-size:1.3rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        &:hover{
+            cursor:pointer;
+            background-color:#c52c00;
+        }
+        img{
+            margin-left:10px;
+            margin-right:5px;
+            height:17px;
+        }
+    }
+    .profile-related{
+        display:flex;
+        align-items:center;
+        margin-right:20px;
+        .profile{
+            display:flex;
+            align-items:center;
+            color:#FFF;
+            .profile_pic{
+                height:45px;
+
+            }
+            span{
+                margin-left:10px;
+                margin-right: 10px;    
+            }
+            
+        }
+        .notificacoes{
+            a {
+                img{
+                    height:20px;
+                }
+            }
+            .history{
+                img{
+                    height:16px;
+                    
+                }
+                margin-right:5px;    
+            }
+            margin-right:10px;
+        }
+    }
+}
+.content-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    form{
+        margin-top:10px;
+        display: flex;
+        flex-direction: column;
+        font-family: "Montserrat-light";
+        label{
+            font-weight:bold;
+            font-size:1.1rem;
+        }
+        input[type="text"]{
+            margin-bottom:10px;
+        }
+        input[type="text"], textarea{
+            border: 1px solid #000;
+            border-radius: 4px;
+            padding:5px;
+            width:300px;
+        }
+        textarea{
+            height:200px;
+        }
+        .submit-btn{
+            width:100px;
+            background-color:#e95d35;
+            border:0px solid #333;
+            margin-top:10px;
+            color:#FFF;
+            font-size: 1rem;
+            padding:3px;
+            &:hover{
+                cursor:pointer;
+            }
+        }
+    }
+}

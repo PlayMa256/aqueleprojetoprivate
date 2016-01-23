@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medicos</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+   <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+</head>
+<body>
+<header>
+        <a href="">LOGO</a>
+        <button class="reclame">Reclame <%= image_tag "megaphone.png" %></button>
+        <div class="profile-related">
+            <div class="profile">
+                <div class="notificacoes">
+                    <a href="#" class="history"><%= image_tag "hitory.png" %></a>
+                    <a href="#" class="chat" ><%= image_tag "chat.png" %></a>
+                </div>
+                <%= image_tag "avatar-teste.png", class:"profile_pic" %>
+                <span>Fulano</span>
+                <%= image_tag "entypo-arrow-white.png"%>
+            </div>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <%= yield %>
+    </div>
+
+
+</body>
+</html>

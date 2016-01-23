@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160110143717) do
+ActiveRecord::Schema.define(version: 20160112180457) do
 
   create_table "reclamacoes", force: :cascade do |t|
     t.integer  "usuario_reclamante_id"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20160110143717) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "nome"
+    t.string   "especializacao"
+    t.string   "crm"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
