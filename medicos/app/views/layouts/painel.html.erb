@@ -5,13 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-   <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 </head>
 <body>
+<% if flash[:alert] %>
+    <div class="alerta alert">
+        <a href="#" class="fechar">X</a>
+        <p><%= alert %></p>
+    </div>
+<% end %>
+<% if flash[:notice] %>
+    <div class="alerta notice">
+        <a href="#" class="fechar">X</a>
+        <p><%= notice %></p>
+    </div>
+<% end %>
 <header>
         <a href="">LOGO</a>
-        <button class="reclame">Reclame <%= image_tag "megaphone.png" %></button>
+        <%= link_to "Reclame", new_reclamacao_path, class: "reclame" %>
+        <!--<button class="reclame">Reclame</button>-->
         <div class="profile-related">
             <div class="profile">
                 <div class="notificacoes">

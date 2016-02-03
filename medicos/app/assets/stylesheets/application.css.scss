@@ -1,5 +1,6 @@
 @import "html5reset-1.6.1";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import "alert";
 @font-face {
     font-family: "Montserrat-light";
     src: url("../fonts/Montserrat-Light.otf") format("opentype");
@@ -7,20 +8,27 @@
 $backgroundColorHeader: #393939;
 $backgroundColorMenUIcons: #cd8400;
 $backgroundReclameButton: #e63300;
+body, html, h1, h2, h3, h4, h5, p, a, span, div, section, header, footer{
+    font-family:Montserrat;
+}
 header{
     background-color:$backgroundColorHeader;
     display:flex;
     align-items:center;
     justify-content:space-between;
     
-    button.reclame{
+    .reclame{
         padding-left:10px;
-        background:$backgroundReclameButton;
+        background:image-url('megaphone.png') no-repeat center right $backgroundReclameButton;
         border:0;
         color:#FFFFFF;
         font-size:1.3rem;
         padding-top: 5px;
         padding-bottom: 5px;
+        background-size: auto 15px;
+        background-position:108px 8px;
+        padding-right:29px;
+        text-decoration:none;
         &:hover{
             cursor:pointer;
             background-color:#c52c00;
@@ -67,9 +75,15 @@ header{
     }
 }
 .content-wrapper{
+    padding-top:20px;
     display:flex;
     align-items:center;
     justify-content:center;
+    flex-direction:column;
+    
+    h1{
+        font-size:1.5rem;
+    }
     
     form{
         margin-top:10px;
@@ -78,7 +92,7 @@ header{
         font-family: "Montserrat-light";
         label{
             font-weight:bold;
-            font-size:1.1rem;
+            font-size:1.05rem;
         }
         input[type="text"]{
             margin-bottom:10px;

@@ -1,6 +1,10 @@
+<h1>Faça sua reclamação</h1>
 <%= form_for @reclamacao do |f| %>
     <%= f.label :titulo %>
     <%= f.text_field  :titulo %>
+    
+    <label>Médico que lhe atendeu</label>
+    <input type="text" name="reclamacao[reclamador]" />
     
     <%= f.label :conteudo %>
     <%= f.text_area  :conteudo %>

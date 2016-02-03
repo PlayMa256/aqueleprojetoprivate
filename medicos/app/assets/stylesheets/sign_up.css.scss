@@ -10,28 +10,7 @@ body, html{
     justify-content:center;
     flex-direction:column;
 }
-.alerta{
-    z-index:99;
-    background-color:red;
-    position:absolute;
-    top:50%;
-    left:50%;
-    width:400px;
-    height:100px;
-    margin-left:-200px;
-    margin-top:-50px;
-    display:flex;
-    align-items:center;
-    span{
-        right:0;
-        position:relative;
-        top:0;
-    }
-    p{
-        text-align:center;
-
-    }
-}
+@import "alert";
 .sign-up-wrapper{
     background: #fff4e1;
     width:$width;

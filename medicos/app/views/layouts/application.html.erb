@@ -3,28 +3,33 @@
 <head>
   <title>Medicos</title>
   <%= stylesheet_link_tag    'sign_up', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <%= javascript_include_tag 'logins', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
-    <% if flash[:alert] %>
-        <div class="alerta alert">
-            <a href="#" class="fechar">X</a>
-            <p><%= alert %></p>
-        </div>
-    <% end %>
-    <% if flash[:notice] %>
-        <div class="alerta notice">
-            <a href="#" class="fechar">X</a>
-            <p><%= notice %></p>
-        </div>
-    <% end %>
+<% if flash[:alert] %>
+    <div class="alerta alert">
+        <a href="#" class="fechar">X</a>
+        <p><%= alert %></p>
+    </div>
+<% end %>
+<% if flash[:notice] %>
+    <div class="alerta notice">
+        <a href="#" class="fechar">X</a>
+        <p><%= notice %></p>
+    </div>
+<% end %>
 <div class="sign-up-wrapper">
 
         
         <%= yield %>
     </div>
+    <script src="/node_modules/angular/angular.js"></script> 
+	<script src="/node_modules/angular-aria/angular-aria.js"></script> 
+	<script src="/node_modules/angular-animate/angular-animate.js"></script> 
+	<script src="/node_modules/angular-material/angular-material.js"></script> 
 </body>
 </html>

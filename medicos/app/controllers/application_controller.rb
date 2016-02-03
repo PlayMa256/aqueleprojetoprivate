@@ -5,9 +5,14 @@ class ApplicationController < ActionController::Base
   
   before_action :configure_devise_permitted_parameters, if: :devise_controller?
   
+ I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}')]
+  I18n.default_locale = :'pt-BR'
+  
   def after_sign_in_path_for(resource)
-    painel_index_path
+    painel_path
   end
+  
+
 
   protected
   def configure_devise_permitted_parameters

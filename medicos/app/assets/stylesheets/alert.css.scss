@@ -1,0 +1,33 @@
+.alerta{
+    z-index:99;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    a.fechar{
+        right:0;
+        position:relative;
+        top:0;
+        float:right;
+        text-decoration:none;
+        color:#333;
+        font-size:12px;
+    }
+    p{
+        padding:10px;
+        margin:auto;
+        float:left;
+        text-align:center;
+    }
+}
+.alert{
+    background-color:#F2DEDE;
+    color:#A94442;
+    border:1px solid #A94442;
+}
+.notice{
+    background:#DFF0D8;
+    color:#77763D;
+    border:1px solid #77763D;            
+    
+}
