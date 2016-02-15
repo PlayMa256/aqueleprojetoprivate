@@ -1,3 +1,10 @@
-
 //= require turbolinks
-//= require_tree .
+//= require jquery
+//= require angular
+//= require ngResource
+//= require angular-animate
+//= require angular-aria
+//= require angular-material
+//= require angular_reclamacoes
+//= require angucomplete-alt
+//= require reclamacoes/reclamacoesController

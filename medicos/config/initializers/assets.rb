@@ -6,6 +6,8 @@ Rails.application.config.assets.precompile += %w( home.css )
 Rails.application.config.assets.precompile += %w( sign_up.css )
 Rails.application.config.assets.precompile += %w( logins.js )
 Rails.application.config.assets.precompile += %w( jquery.js )
+Rails.application.config.assets.precompile += %w( angular_reclamacoes.js )
+Rails.application.config.assets.precompile += %w( angular.js )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

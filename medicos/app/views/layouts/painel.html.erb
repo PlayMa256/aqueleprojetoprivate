@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <title>Medicos</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+  
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-app="reclamacoes">
 <% if flash[:alert] %>
     <div class="alerta alert">
         <a href="#" class="fechar">X</a>

@@ -1,2 +1,1 @@
-var angular_app = angular.module('reclamacoes', []);
-//= require_tree reclamacoes
+var angular_app = angular.module('reclamacoes', ['ngResource', 'angucomplete-alt']);

@@ -1,12 +1,24 @@
 <h1>Faça sua reclamação</h1>
-<%= form_for @reclamacao do |f| %>
-    <%= f.label :titulo %>
-    <%= f.text_field  :titulo %>
-    
-    <label>Médico que lhe atendeu</label>
-    <input type="text" name="reclamacao[reclamador]" />
-    
-    <%= f.label :conteudo %>
-    <%= f.text_area  :conteudo %>
-    <%= f.submit "Cadastrar", class:"submit-btn" %>
-<% end %>
+<div ng-controller="ReclamacaoController as ctrl">
+    <form ng-submit="cadastrar()" method="post">
+        
+        <label>Titulo</label>
+        <input type="text" name="reclamacao[titulo]" placeholder="Titulo da reclamação" />
+        <label>Médico que lhe atendeu</label>
+        <!--<input type="text" name="reclamacao[reclamador]" />-->
+        <div>
+            <angucomplete-alt id="ex1"
+                  placeholder="Procure por um Médico"
+                  pause="100"
+                  input-name="reclamacao[reclamado]"
+                  selected-object="selectedCountry"
+                  local-data="medicos"
+                  search-fields="nome"
+                  title-field="nome"
+                  minlength="1"/>
+        </div> 
+        <label>Titulo</label>    
+        <textarea name="reclamacao[conteudo]" placeholder="Fale o seu problema"></textarea>
+        <input type="submit" value="Cadastrar" class="submit-btn" />
+    </form>
+</div>
